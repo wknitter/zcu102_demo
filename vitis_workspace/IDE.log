@@ -1,0 +1,42 @@
+11:49:53 INFO  : Launching XSCT server: xsct -n  -interactive /home/whitney/zcu102_demo/vitis_workspace/temp_xsdb_launch_script.tcl
+11:50:00 INFO  : XSCT server has started successfully.
+11:50:00 INFO  : Successfully done setting XSCT server connection channel  
+11:50:00 INFO  : plnx-install-location is set to ''
+11:50:01 INFO  : Successfully done setting workspace for the tool. 
+11:50:01 INFO  : Successfully done query RDI_DATADIR 
+11:50:01 INFO  : Registering command handlers for Vitis TCF services
+11:56:52 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss"
+11:56:52 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss"
+11:56:53 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/psu_cortexa53_0/standalone_domain/bsp/system.mss"
+17:26:43 INFO  : (SwPlaform) Successfully done setParamInSpec 
+17:29:21 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss"
+17:29:21 INFO  : No changes in MSS file content so sources will not be generated.
+22:08:24 INFO  : Launching XSCT server: xsct -n  -interactive /home/whitney/zcu102_demo/vitis_workspace/temp_xsdb_launch_script.tcl
+22:08:28 INFO  : XSCT server has started successfully.
+22:08:29 INFO  : plnx-install-location is set to ''
+22:08:37 INFO  : Registering command handlers for Vitis TCF services
+22:08:52 INFO  : Successfully done setting XSCT server connection channel  
+22:08:52 INFO  : Successfully done query RDI_DATADIR 
+22:08:52 INFO  : Successfully done setting workspace for the tool. 
+22:08:54 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss"
+22:08:54 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss"
+22:08:55 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/psu_cortexa53_0/standalone_domain/bsp/system.mss"
+22:11:25 INFO  : Checking for BSP changes to sync application flags for project 'hello_zcu102'...
+22:14:15 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss"
+22:14:16 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss"
+22:14:17 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/psu_cortexa53_0/standalone_domain/bsp/system.mss"
+22:16:11 INFO  : (SwPlaform) Successfully done setParamInSpec 
+22:16:13 INFO  : (SwPlatform) Successfully done update_mss 
+22:16:14 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/psu_cortexa53_0/standalone_domain/bsp/system.mss"
+22:17:05 INFO  : Checking for BSP changes to sync application flags for project 'hello_zcu102'...
+22:17:16 INFO  : Updating application flags with new BSP settings...
+22:17:16 INFO  : Successfully updated application flags for project hello_zcu102.
+14:02:42 INFO  : Checking for BSP changes to sync application flags for project 'hello_zcu102'...
+15:11:27 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss"
+15:11:27 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss"
+15:11:28 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/psu_cortexa53_0/standalone_domain/bsp/system.mss"
+15:16:05 INFO  : Checking for BSP changes to sync application flags for project 'hello_zcu102'...
+15:19:07 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss"
+15:19:07 INFO  : No changes in MSS file content so sources will not be generated.
+15:19:56 INFO  : Successfully done sdx_reload_mss "/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/psu_cortexa53_0/standalone_domain/bsp/system.mss"
+15:19:56 INFO  : No changes in MSS file content so sources will not be generated.

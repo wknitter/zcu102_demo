@@ -1,0 +1,8 @@
+-M
+microblaze-fdt
+-device
+loader,file=<zcu102_demo/qemu/pmufw.elf>
+-machine-path
+.
+-display
+none

@@ -1,0 +1,2722 @@
+22:11:18 **** Incremental Build of project zcu102_demo ****
+buildplatform.sh 32999 zcu102_demo no_domain_build 
+XSDB Server Channel: tcfchan#1
+22:11:35 **** Build of configuration Debug for project hello_zcu102 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: hello_zcu102.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/standalone_domain/bsplib/lib -o "hello_zcu102.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_zcu102.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size hello_zcu102.elf  |tee "hello_zcu102.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30308	   2048	  20616	  52972	   ceec	hello_zcu102.elf
+Finished building: hello_zcu102.elf.size
+ 
+22:11:36 **** Build of configuration Debug for project hello_zcu102_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm -domains standalone_domain -bifpath /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm --sys_config zcu102_demo --bif /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif --bitstream /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/_ide/bitstream/zcu102_bd_wrapper.bit --elf /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/Debug/hello_zcu102.elf,psu_cortexa53_0
+creating BOOT.BIN using /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/_ide/bitstream/zcu102_bd_wrapper.bit
+Running /tools/Xilinx/Vitis/2019.2/bin/bootgen -arch zynqmp -image /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+22:16:25 **** Incremental Build of project zcu102_demo ****
+buildplatform.sh 32999 zcu102_demo standalone_domain 
+XSDB Server Channel: tcfchan#3
+Building the BSP Library for domain  - standalone_domain on processor psu_cortexa53_0
+Running Make include in psu_cortexa53_0/libsrc/clockps_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/clockps_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/scugic_v4_1/src
+
+make -C psu_cortexa53_0/libsrc/scugic_v4_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/resetps_v1_2/src
+
+make -C psu_cortexa53_0/libsrc/resetps_v1_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/csudma_v1_5/src
+
+make -C psu_cortexa53_0/libsrc/csudma_v1_5/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=
+aarch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_7/src
+
+make -C psu_cortexa53_0/libsrc/axipmon_v6_7/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_5/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/zdma_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/zdma_v1_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_6/src
+
+make -C psu_cortexa53_0/libsrc/gpiops_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/usbpsu_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/emacps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/emacps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/ttcps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/canps_v3_3/src
+
+make -C psu_cortexa53_0/libsrc/canps_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/video_common_v4_8/src
+
+make -C psu_cortexa53_0/libsrc/video_common_v4_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aar
+ch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/wdtps_v3_2/src
+
+make -C psu_cortexa53_0/libsrc/wdtps_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/avbuf_v2_2/src
+
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/sdps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/sdps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/iicps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/iicps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/dpdma_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/standalone_v7_1/src
+
+make -C psu_cortexa53_0/libsrc/standalone_v7_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch
+64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/uartps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/uartps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/pciepsu_v1_0/src
+
+make -C psu_cortexa53_0/libsrc/pciepsu_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/gpio_v4_5/src
+
+make -C psu_cortexa53_0/libsrc/gpio_v4_5/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aa
+rch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/qspipsu_v1_10/src
+
+make -C psu_cortexa53_0/libsrc/qspipsu_v1_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64
+-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make libs in psu_cortexa53_0/libsrc/clockps_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/clockps_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling clockps
+
+aarch64-none-elf-ar: creating ../../../lib/libxil.a
+Running Make libs in psu_cortexa53_0/libsrc/scugic_v4_1/src
+
+make -C psu_cortexa53_0/libsrc/scugic_v4_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling scugic
+
+Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling rtcpsu
+
+Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_2/src
+
+make -C psu_cortexa53_0/libsrc/resetps_v1_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling resetps
+
+Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_5/src
+
+make -C psu_cortexa53_0/libsrc/csudma_v1_5/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling csudma
+
+Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aar
+ch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling coresightps_dcc
+
+Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_7/src
+
+make -C psu_cortexa53_0/libsrc/axipmon_v6_7/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling axipmon
+
+Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_5/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling ipipsu
+
+Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/zdma_v1_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling zdma
+
+Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_6/src
+
+make -C psu_cortexa53_0/libsrc/gpiops_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling gpiops
+
+Running Make libs in psu_cortexa53_0/libsrc/usbpsu_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling usbpsu
+
+Running Make libs in psu_cortexa53_0/libsrc/emacps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/emacps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling emacps
+
+Running Make libs in psu_cortexa53_0/libsrc/ttcps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/ttcps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling ttcps
+
+Running Make libs in psu_cortexa53_0/libsrc/canps_v3_3/src
+
+make -C psu_cortexa53_0/libsrc/canps_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling canps
+
+Running Make libs in psu_cortexa53_0/libsrc/video_common_v4_8/src
+
+make -C psu_cortexa53_0/libsrc/video_common_v4_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling video_common
+
+Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling sysmonpsu
+
+Running Make libs in psu_cortexa53_0/libsrc/wdtps_v3_2/src
+
+make -C psu_cortexa53_0/libsrc/wdtps_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling wdtps
+
+Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling ddrcpsu
+
+Running Make libs in psu_cortexa53_0/libsrc/avbuf_v2_2/src
+
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling avbuf
+
+Running Make libs in psu_cortexa53_0/libsrc/sdps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/sdps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling sdps
+
+Running Make libs in psu_cortexa53_0/libsrc/iicps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/iicps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling iicps
+
+Running Make libs in psu_cortexa53_0/libsrc/dpdma_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling dpdma
+
+Running Make libs in psu_cortexa53_0/libsrc/standalone_v7_1/src
+
+make -C psu_cortexa53_0/libsrc/standalone_v7_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling standalone ARMv8 64 bit
+
+xen_console.c: In function 'xencons_ring_send_no_notify':
+xen_console.c:174:15: warning: comparison of integer expressions of different signedness: 'int' and 'unsigned int' [-Wsign-compare]
+  while ((sent < len) && ((prod - cons) < sizeof(intf->out)))
+               ^
+xen_console.c: In function 'console_handle_input':
+xen_console.c:270:13: warning: unused variable 'cr' [-Wunused-variable]
+  static int cr = 0;
+             ^~
+xen_console.c: In function 'init_console':
+xen_console.c:298:6: warning: unused variable 'rv' [-Wunused-variable]
+  int rv;
+      ^~
+At top level:
+xen_console.c:270:13: warning: 'cr' defined but not used [-Wunused-variable]
+  static int cr = 0;
+             ^~
+In file included from xtime_l.c:50:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:57:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+xil_cache.c: In function 'Xil_ConfigureL1Prefetch':
+xil_cache.c:771:34: warning: unused parameter 'num' [-Wunused-parameter]
+ void Xil_ConfigureL1Prefetch (u8 num) {
+                               ~~~^~~
+In file included from xil_sleeptimer.c:52:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+xil_smc.c: In function 'Xil_Smc':
+xil_smc.c:73:25: warning: unused parameter 'FunctionID' [-Wunused-parameter]
+ XSmc_OutVar Xil_Smc(u64 FunctionID, u64 Arg1, u64 Arg2, u64 Arg3, u64 Arg4,
+                     ~~~~^~~~~~~~~~
+xil_smc.c:73:41: warning: unused parameter 'Arg1' [-Wunused-parameter]
+ XSmc_OutVar Xil_Smc(u64 FunctionID, u64 Arg1, u64 Arg2, u64 Arg3, u64 Arg4,
+                                     ~~~~^~~~
+xil_smc.c:73:51: warning: unused parameter 'Arg2' [-Wunused-parameter]
+ XSmc_OutVar Xil_Smc(u64 FunctionID, u64 Arg1, u64 Arg2, u64 Arg3, u64 Arg4,
+                                               ~~~~^~~~
+xil_smc.c:73:61: warning: unused parameter 'Arg3' [-Wunused-parameter]
+ XSmc_OutVar Xil_Smc(u64 FunctionID, u64 Arg1, u64 Arg2, u64 Arg3, u64 Arg4,
+                                                         ~~~~^~~~
+xil_smc.c:73:71: warning: unused parameter 'Arg4' [-Wunused-parameter]
+ XSmc_OutVar Xil_Smc(u64 FunctionID, u64 Arg1, u64 Arg2, u64 Arg3, u64 Arg4,
+                                                                   ~~~~^~~~
+xil_smc.c:74:10: warning: unused parameter 'Arg5' [-Wunused-parameter]
+      u64 Arg5, u64 Arg6, u64 Arg7){
+      ~~~~^~~~
+xil_smc.c:74:20: warning: unused parameter 'Arg6' [-Wunused-parameter]
+      u64 Arg5, u64 Arg6, u64 Arg7){
+                ~~~~^~~~
+xil_smc.c:74:30: warning: unused parameter 'Arg7' [-Wunused-parameter]
+      u64 Arg5, u64 Arg6, u64 Arg7){
+                          ~~~~^~~~
+xen_events.c: In function 'handle_event_irq':
+xen_events.c:146:29: warning: unused parameter 'data' [-Wunused-parameter]
+ void handle_event_irq(void* data)
+                       ~~~~~~^~~~
+Running Make libs in psu_cortexa53_0/libsrc/uartps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/uartps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling uartps
+
+Running Make libs in psu_cortexa53_0/libsrc/pciepsu_v1_0/src
+
+make -C psu_cortexa53_0/libsrc/pciepsu_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling pciepsu
+
+Running Make libs in psu_cortexa53_0/libsrc/gpio_v4_5/src
+
+make -C psu_cortexa53_0/libsrc/gpio_v4_5/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling gpio
+
+Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch
+64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling cpu_cortexa53
+
+Running Make libs in psu_cortexa53_0/libsrc/qspipsu_v1_10/src
+
+make -C psu_cortexa53_0/libsrc/qspipsu_v1_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling qspipsu
+
+Finished building libraries
+
+22:17:16 **** Incremental Build of configuration Debug for project hello_zcu102 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: hello_zcu102.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/standalone_domain/bsplib/lib -o "hello_zcu102.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: hello_zcu102.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size hello_zcu102.elf  |tee "hello_zcu102.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30180	   2048	  20616	  52844	   ce6c	hello_zcu102.elf
+Finished building: hello_zcu102.elf.size
+ 
+22:17:17 **** Incremental Build of configuration Debug for project hello_zcu102_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm -domains standalone_domain -bifpath /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm --sys_config zcu102_demo --bif /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif --bitstream /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/_ide/bitstream/zcu102_bd_wrapper.bit --elf /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/Debug/hello_zcu102.elf,psu_cortexa53_0
+creating BOOT.BIN using /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/_ide/bitstream/zcu102_bd_wrapper.bit
+Running /tools/Xilinx/Vitis/2019.2/bin/bootgen -arch zynqmp -image /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+Nothing to build in platform 'zcu102_demo'
+
+14:02:42 **** Incremental Build of configuration Debug for project hello_zcu102 ****
+make all 
+make: Nothing to be done for 'all'.
+14:02:43 **** Incremental Build of configuration Debug for project hello_zcu102_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm -domains standalone_domain -bifpath /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm --sys_config zcu102_demo --bif /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif --bitstream /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/_ide/bitstream/zcu102_bd_wrapper.bit --elf /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/Debug/hello_zcu102.elf,psu_cortexa53_0
+creating BOOT.BIN using /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/_ide/bitstream/zcu102_bd_wrapper.bit
+Running /tools/Xilinx/Vitis/2019.2/bin/bootgen -arch zynqmp -image /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+Nothing to build in platform 'zcu102_demo'
+
+15:16:05 **** Incremental Build of configuration Debug for project hello_zcu102 ****
+make all 
+make: Nothing to be done for 'all'.
+15:16:05 **** Incremental Build of configuration Debug for project hello_zcu102_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm -domains standalone_domain -bifpath /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm --sys_config zcu102_demo --bif /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif --bitstream /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/_ide/bitstream/zcu102_bd_wrapper.bit --elf /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/Debug/hello_zcu102.elf,psu_cortexa53_0
+creating BOOT.BIN using /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102/_ide/bitstream/zcu102_bd_wrapper.bit
+Running /tools/Xilinx/Vitis/2019.2/bin/bootgen -arch zynqmp -image /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+15:16:12 **** Build of project zcu102_demo0 ****
+buildplatform.sh 32999 zcu102_demo0  
+XSDB Server Channel: tcfchan#7
+Building the zynqmp_fsbl application.
+make -C zynqmp_fsbl_bsp
+
+make[1]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp'
+
+Running Make include in psu_cortexa53_0/libsrc/clockps_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/clockps_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lt
+o-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/clockps_v1_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/clockps_v1_1/src'
+
+Running Make include in psu_cortexa53_0/libsrc/xilffs_v4_2/src
+
+make -C psu_cortexa53_0/libsrc/xilffs_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/xilffs_v4_2/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/xilffs_v4_2/src'
+
+Running Make include in psu_cortexa53_0/libsrc/scugic_v4_1/src
+
+make -C psu_cortexa53_0/libsrc/scugic_v4_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/scugic_v4_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/scugic_v4_1/src'
+
+Running Make include in psu_cortexa53_0/libsrc/xilpm_v3_0/src
+
+make -C psu_cortexa53_0/libsrc/xilpm_v3_0/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-
+objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/xilpm_v3_0/src'
+
+Include files for this library have already been copied.
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/xilpm_v3_0/src'
+
+Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/rtcpsu_v1_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/rtcpsu_v1_8/src'
+
+Running Make include in psu_cortexa53_0/libsrc/resetps_v1_2/src
+
+make -C psu_cortexa53_0/libsrc/resetps_v1_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lt
+o-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/resetps_v1_2/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/resetps_v1_2/src'
+
+Running Make include in psu_cortexa53_0/libsrc/csudma_v1_5/src
+
+make -C psu_cortexa53_0/libsrc/csudma_v1_5/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/csudma_v1_5/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/csudma_v1_5/src'
+
+Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=
+aarch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto 
+-ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/coresightps_dcc_v1_6/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/coresightps_dcc_v1_6/src'
+
+Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_7/src
+
+make -C psu_cortexa53_0/libsrc/axipmon_v6_7/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lt
+o-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/axipmon_v6_7/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/axipmon_v6_7/src'
+
+Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_5/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/ipipsu_v2_5/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/ipipsu_v2_5/src'
+
+Running Make include in psu_cortexa53_0/libsrc/zdma_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/zdma_v1_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-o
+bjects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/zdma_v1_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/zdma_v1_8/src'
+
+Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_6/src
+
+make -C psu_cortexa53_0/libsrc/gpiops_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/gpiops_v3_6/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/gpiops_v3_6/src'
+
+Running Make include in psu_cortexa53_0/libsrc/usbpsu_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/usbpsu_v1_6/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/usbpsu_v1_6/src'
+
+Running Make include in psu_cortexa53_0/libsrc/xilsecure_v4_1/src
+
+make -C psu_cortexa53_0/libsrc/xilsecure_v4_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-
+lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/xilsecure_v4_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/xilsecure_v4_1/src'
+
+Running Make include in psu_cortexa53_0/libsrc/emacps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/emacps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lt
+o-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/emacps_v3_10/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/emacps_v3_10/src'
+
+Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/ttcps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/ttcps_v3_10/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/ttcps_v3_10/src'
+
+Running Make include in psu_cortexa53_0/libsrc/canps_v3_3/src
+
+make -C psu_cortexa53_0/libsrc/canps_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-
+objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/canps_v3_3/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/canps_v3_3/src'
+
+Running Make include in psu_cortexa53_0/libsrc/video_common_v4_8/src
+
+make -C psu_cortexa53_0/libsrc/video_common_v4_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aar
+ch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ff
+at-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/video_common_v4_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/video_common_v4_8/src'
+
+Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-
+lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/sysmonpsu_v2_5/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/sysmonpsu_v2_5/src'
+
+Running Make include in psu_cortexa53_0/libsrc/wdtps_v3_2/src
+
+make -C psu_cortexa53_0/libsrc/wdtps_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-
+objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/wdtps_v3_2/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/wdtps_v3_2/src'
+
+Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lt
+o-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/ddrcpsu_v1_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/ddrcpsu_v1_1/src'
+
+Running Make include in psu_cortexa53_0/libsrc/avbuf_v2_2/src
+
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-
+objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/avbuf_v2_2/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/avbuf_v2_2/src'
+
+Running Make include in psu_cortexa53_0/libsrc/sdps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/sdps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-o
+bjects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/sdps_v3_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/sdps_v3_8/src'
+
+Running Make include in psu_cortexa53_0/libsrc/iicps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/iicps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/iicps_v3_10/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/iicps_v3_10/src'
+
+Running Make include in psu_cortexa53_0/libsrc/dpdma_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-
+objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/dpdma_v1_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/dpdma_v1_1/src'
+
+Running Make include in psu_cortexa53_0/libsrc/standalone_v7_1/src
+
+make -C psu_cortexa53_0/libsrc/standalone_v7_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch
+64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat
+-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/standalone_v7_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/standalone_v7_1/src'
+
+Running Make include in psu_cortexa53_0/libsrc/uartps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/uartps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/uartps_v3_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/uartps_v3_8/src'
+
+Running Make include in psu_cortexa53_0/libsrc/pciepsu_v1_0/src
+
+make -C psu_cortexa53_0/libsrc/pciepsu_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lt
+o-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/pciepsu_v1_0/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/pciepsu_v1_0/src'
+
+Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aa
+rch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -f
+fat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/cpu_cortexa53_v1_6/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/cpu_cortexa53_v1_6/src'
+
+Running Make include in psu_cortexa53_0/libsrc/qspipsu_v1_10/src
+
+make -C psu_cortexa53_0/libsrc/qspipsu_v1_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64
+-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-l
+to-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/qspipsu_v1_10/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/qspipsu_v1_10/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/clockps_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/clockps_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-o
+bjects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/clockps_v1_1/src'
+
+Compiling clockps
+
+aarch64-none-elf-ar: creating ../../../lib/libxil.a
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/clockps_v1_1/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/xilffs_v4_2/src
+
+make -C psu_cortexa53_0/libsrc/xilffs_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-ob
+jects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/xilffs_v4_2/src'
+
+Compiling XilFFs Library
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/xilffs_v4_2/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/scugic_v4_1/src
+
+make -C psu_cortexa53_0/libsrc/scugic_v4_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-ob
+jects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/scugic_v4_1/src'
+
+Compiling scugic
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/scugic_v4_1/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/xilpm_v3_0/src
+
+make -C psu_cortexa53_0/libsrc/xilpm_v3_0/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-obj
+ects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/xilpm_v3_0/src'
+
+Compiling xilpm library
+
+pm_api_sys.c: In function 'XPm_ClockSetRate':
+pm_api_sys.c:1771:46: warning: unused parameter 'clock' [-Wunused-parameter]
+ XStatus XPm_ClockSetRate(const enum XPmClock clock, const u32 rate)
+                          ~~~~~~~~~~~~~~~~~~~~^~~~~
+pm_api_sys.c:1771:63: warning: unused parameter 'rate' [-Wunused-parameter]
+ XStatus XPm_ClockSetRate(const enum XPmClock clock, const u32 rate)
+                                                     ~~~~~~~~~~^~~~
+pm_api_sys.c: In function 'XPm_ClockGetRate':
+pm_api_sys.c:1788:46: warning: unused parameter 'clock' [-Wunused-parameter]
+ XStatus XPm_ClockGetRate(const enum XPmClock clock, u32 *const rate)
+                          ~~~~~~~~~~~~~~~~~~~~^~~~~
+pm_api_sys.c:1788:64: warning: unused parameter 'rate' [-Wunused-parameter]
+ XStatus XPm_ClockGetRate(const enum XPmClock clock, u32 *const rate)
+                                                     ~~~~~~~~~~~^~~~
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/xilpm_v3_0/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-ob
+jects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/rtcpsu_v1_8/src'
+
+Compiling rtcpsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/rtcpsu_v1_8/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_2/src
+
+make -C psu_cortexa53_0/libsrc/resetps_v1_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-o
+bjects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/resetps_v1_2/src'
+
+Compiling resetps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/resetps_v1_2/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_5/src
+
+make -C psu_cortexa53_0/libsrc/csudma_v1_5/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-ob
+jects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/csudma_v1_5/src'
+
+Compiling csudma
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/csudma_v1_5/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aar
+ch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ff
+at-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/coresightps_dcc_v1_6/src'
+
+Compiling coresightps_dcc
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/coresightps_dcc_v1_6/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_7/src
+
+make -C psu_cortexa53_0/libsrc/axipmon_v6_7/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-o
+bjects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/axipmon_v6_7/src'
+
+Compiling axipmon
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/axipmon_v6_7/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_5/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-ob
+jects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/ipipsu_v2_5/src'
+
+Compiling ipipsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/ipipsu_v2_5/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/zdma_v1_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-obje
+cts"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/zdma_v1_8/src'
+
+Compiling zdma
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/zdma_v1_8/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_6/src
+
+make -C psu_cortexa53_0/libsrc/gpiops_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-ob
+jects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/gpiops_v3_6/src'
+
+Compiling gpiops
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/gpiops_v3_6/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/usbpsu_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-ob
+jects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/usbpsu_v1_6/src'
+
+Compiling usbpsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/usbpsu_v1_6/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/xilsecure_v4_1/src
+
+make -C psu_cortexa53_0/libsrc/xilsecure_v4_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/xilsecure_v4_1/src'
+
+Compiling XilSecure Library
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/xilsecure_v4_1/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/emacps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/emacps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-o
+bjects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/emacps_v3_10/src'
+
+Compiling emacps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/emacps_v3_10/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/ttcps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/ttcps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-ob
+jects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/ttcps_v3_10/src'
+
+Compiling ttcps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/ttcps_v3_10/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/canps_v3_3/src
+
+make -C psu_cortexa53_0/libsrc/canps_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-obj
+ects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/canps_v3_3/src'
+
+Compiling canps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/canps_v3_3/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/video_common_v4_8/src
+
+make -C psu_cortexa53_0/libsrc/video_common_v4_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-
+lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/video_common_v4_8/src'
+
+Compiling video_common
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/video_common_v4_8/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto
+-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/sysmonpsu_v2_5/src'
+
+Compiling sysmonpsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/sysmonpsu_v2_5/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/wdtps_v3_2/src
+
+make -C psu_cortexa53_0/libsrc/wdtps_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-obj
+ects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/wdtps_v3_2/src'
+
+Compiling wdtps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/wdtps_v3_2/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-o
+bjects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/ddrcpsu_v1_1/src'
+
+Compiling ddrcpsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/ddrcpsu_v1_1/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/avbuf_v2_2/src
+
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-obj
+ects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/avbuf_v2_2/src'
+
+Compiling avbuf
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/avbuf_v2_2/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/sdps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/sdps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-obje
+cts"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/sdps_v3_8/src'
+
+Compiling sdps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/sdps_v3_8/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/iicps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/iicps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-ob
+jects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/iicps_v3_10/src'
+
+Compiling iicps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/iicps_v3_10/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/dpdma_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-obj
+ects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/dpdma_v1_1/src'
+
+Compiling dpdma
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/dpdma_v1_1/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/standalone_v7_1/src
+
+make -C psu_cortexa53_0/libsrc/standalone_v7_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lt
+o-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/standalone_v7_1/src'
+
+Compiling standalone ARMv8 64 bit
+
+In file included from xtime_l.c:50:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:57:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:52:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/standalone_v7_1/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/uartps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/uartps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-ob
+jects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/uartps_v3_8/src'
+
+Compiling uartps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/uartps_v3_8/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/pciepsu_v1_0/src
+
+make -C psu_cortexa53_0/libsrc/pciepsu_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-o
+bjects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/pciepsu_v1_0/src'
+
+Compiling pciepsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/pciepsu_v1_0/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch
+64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat
+-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/cpu_cortexa53_v1_6/src'
+
+Compiling cpu_cortexa53
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/cpu_cortexa53_v1_6/src'
+
+Running Make libs in psu_cortexa53_0/libsrc/qspipsu_v1_10/src
+
+make -C psu_cortexa53_0/libsrc/qspipsu_v1_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra -Os -flto -ffat-lto-
+objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0
+/libsrc/qspipsu_v1_10/src'
+
+Compiling qspipsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp/psu_cortexa53_0/
+libsrc/qspipsu_v1_10/src'
+
+Finished building libraries
+
+make[1]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_fsbl/zynqmp_fsbl_bsp'
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_authentication.
+c -o xfsbl_authentication.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+In file included from xfsbl_main.h:61,
+                 from xfsbl_bs.h:59,
+                 from xfsbl_authentication.c:64:
+zynqmp_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_misc.c -o xfsbl
+_misc.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+In file included from xfsbl_main.h:61,
+                 from xfsbl_misc.c:51:
+zynqmp_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_sd.c -o xfsbl_s
+d.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+In file included from xfsbl_main.h:61,
+                 from xfsbl_sd.c:49:
+zynqmp_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_csu_dma.c -o xf
+sbl_csu_dma.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_plpartition_val
+id.c -o xfsbl_plpartition_valid.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+In file included from xfsbl_main.h:61,
+                 from xfsbl_authentication.h:62,
+                 from xfsbl_plpartition_valid.h:58,
+                 from xfsbl_plpartition_valid.c:75:
+zynqmp_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_bs.c -o xfsbl_b
+s.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+In file included from xfsbl_main.h:61,
+                 from xfsbl_bs.h:59,
+                 from xfsbl_bs.c:53:
+zynqmp_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_misc_drivers.c 
+-o xfsbl_misc_drivers.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_ddr_init.c -o x
+fsbl_ddr_init.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_board.c -o xfsb
+l_board.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_image_header.c 
+-o xfsbl_image_header.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c psu_init.c -o psu_ini
+t.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_handoff.c -o xf
+sbl_handoff.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+In file included from xfsbl_main.h:61,
+                 from xfsbl_handoff.c:57:
+zynqmp_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_initialization.
+c -o xfsbl_initialization.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+In file included from xfsbl_main.h:61,
+                 from xfsbl_initialization.c:69:
+zynqmp_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_partition_load.
+c -o xfsbl_partition_load.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+In file included from xfsbl_main.h:61,
+                 from xfsbl_partition_load.c:69:
+zynqmp_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_dfu_util.c -o x
+fsbl_dfu_util.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_main.c -o xfsbl
+_main.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+In file included from xfsbl_main.h:61,
+                 from xfsbl_main.c:52:
+zynqmp_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_hooks.c -o xfsb
+l_hooks.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_usb.c -o xfsbl_
+usb.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_nand.c -o xfsbl
+_nand.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_rsa_sha.c -o xf
+sbl_rsa_sha.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+In file included from xfsbl_main.h:61,
+                 from xfsbl_authentication.h:62,
+                 from xfsbl_rsa_sha.c:52:
+zynqmp_fsbl_bsp/psu_cortexa53_0/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_qspi.c -o xfsbl
+_qspi.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_exit.S -o xfsbl
+_exit.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects    -c xfsbl_translation_tab
+le.S -o xfsbl_translation_table.o -Izynqmp_fsbl_bsp/psu_cortexa53_0/include -I.
+
+aarch64-none-elf-gcc -o executable.elf  xfsbl_authentication.o  xfsbl_misc.o  xfsbl_sd.o  xfsbl_csu_dma.o  xfsbl_plpartition_va
+lid.o  xfsbl_bs.o  xfsbl_misc_drivers.o  xfsbl_ddr_init.o  xfsbl_board.o  xfsbl_image_header.o  psu_init.o  xfsbl_handoff.o  xf
+sbl_initialization.o  xfsbl_partition_load.o  xfsbl_dfu_util.o  xfsbl_main.o  xfsbl_hooks.o  xfsbl_usb.o  xfsbl_nand.o  xfsbl_r
+sa_sha.o  xfsbl_qspi.o  xfsbl_exit.o  xfsbl_translation_table.o  -MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -
+ffat-lto-objects    -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--
+start-group,-lxilsecure,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilpm,-lxil,-lgcc,-lc,--end-group                      
+                                                                                         -n  -Wl,--gc-sections -Lzynqmp_fsbl_bs
+p/psu_cortexa53_0/lib -Tlscript.ld
+
+Building the zynqmp_pmufw application.
+make -C zynqmp_pmufw_bsp
+
+make[1]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp'
+
+Running Make include in psu_pmu_0/libsrc/clockps_v1_1/src
+
+make -C psu_pmu_0/libsrc/clockps_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+PILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g 
+-ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/clockps_v1_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/clockps_v1_1/src'
+
+Running Make include in psu_pmu_0/libsrc/xilsecure_v4_1/src
+
+make -C psu_pmu_0/libsrc/xilsecure_v4_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+OMPILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-
+g -ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/xilsecure_v4_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/xilsecure_v4_1/src'
+
+Running Make include in psu_pmu_0/libsrc/rtcpsu_v1_8/src
+
+make -C psu_pmu_0/libsrc/rtcpsu_v1_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -
+ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/rtcpsu_v1_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/rtcpsu_v1_8/src'
+
+Running Make include in psu_pmu_0/libsrc/resetps_v1_2/src
+
+make -C psu_pmu_0/libsrc/resetps_v1_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+PILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g 
+-ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/resetps_v1_2/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/resetps_v1_2/src'
+
+Running Make include in psu_pmu_0/libsrc/csudma_v1_5/src
+
+make -C psu_pmu_0/libsrc/csudma_v1_5/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -
+ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/csudma_v1_5/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/csudma_v1_5/src'
+
+Running Make include in psu_pmu_0/libsrc/axipmon_v6_7/src
+
+make -C psu_pmu_0/libsrc/axipmon_v6_7/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+PILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g 
+-ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/axipmon_v6_7/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/axipmon_v6_7/src'
+
+Running Make include in psu_pmu_0/libsrc/ipipsu_v2_5/src
+
+make -C psu_pmu_0/libsrc/ipipsu_v2_5/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -
+ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/ipipsu_v2_5/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/ipipsu_v2_5/src'
+
+Running Make include in psu_pmu_0/libsrc/zdma_v1_8/src
+
+make -C psu_pmu_0/libsrc/zdma_v1_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/zdma_v1_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/zdma_v1_8/src'
+
+Running Make include in psu_pmu_0/libsrc/gpiops_v3_6/src
+
+make -C psu_pmu_0/libsrc/gpiops_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -
+ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/gpiops_v3_6/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/gpiops_v3_6/src'
+
+Running Make include in psu_pmu_0/libsrc/usbpsu_v1_6/src
+
+make -C psu_pmu_0/libsrc/usbpsu_v1_6/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -
+ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/usbpsu_v1_6/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/usbpsu_v1_6/src'
+
+Running Make include in psu_pmu_0/libsrc/emacps_v3_10/src
+
+make -C psu_pmu_0/libsrc/emacps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+PILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g 
+-ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/emacps_v3_10/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/emacps_v3_10/src'
+
+Running Make include in psu_pmu_0/libsrc/ttcps_v3_10/src
+
+make -C psu_pmu_0/libsrc/ttcps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -
+ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/ttcps_v3_10/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/ttcps_v3_10/src'
+
+Running Make include in psu_pmu_0/libsrc/canps_v3_3/src
+
+make -C psu_pmu_0/libsrc/canps_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+LER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -f
+function-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/canps_v3_3/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/canps_v3_3/src'
+
+Running Make include in psu_pmu_0/libsrc/video_common_v4_8/src
+
+make -C psu_pmu_0/libsrc/video_common_v4_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar"
+ "COMPILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAG
+S=-g -ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/video_common_v4_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/video_common_v4_8/src'
+
+Running Make include in psu_pmu_0/libsrc/xilfpga_v5_1/src
+
+make -C psu_pmu_0/libsrc/xilfpga_v5_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+PILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g 
+-ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/xilfpga_v5_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/xilfpga_v5_1/src'
+
+Running Make include in psu_pmu_0/libsrc/sysmonpsu_v2_5/src
+
+make -C psu_pmu_0/libsrc/sysmonpsu_v2_5/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+OMPILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-
+g -ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/sysmonpsu_v2_5/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/sysmonpsu_v2_5/src'
+
+Running Make include in psu_pmu_0/libsrc/wdtps_v3_2/src
+
+make -C psu_pmu_0/libsrc/wdtps_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+LER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -f
+function-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/wdtps_v3_2/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/wdtps_v3_2/src'
+
+Running Make include in psu_pmu_0/libsrc/ddrcpsu_v1_1/src
+
+make -C psu_pmu_0/libsrc/ddrcpsu_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+PILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g 
+-ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/ddrcpsu_v1_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/ddrcpsu_v1_1/src'
+
+Running Make include in psu_pmu_0/libsrc/avbuf_v2_2/src
+
+make -C psu_pmu_0/libsrc/avbuf_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+LER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -f
+function-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/avbuf_v2_2/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/avbuf_v2_2/src'
+
+Running Make include in psu_pmu_0/libsrc/sdps_v3_8/src
+
+make -C psu_pmu_0/libsrc/sdps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/sdps_v3_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/sdps_v3_8/src'
+
+Running Make include in psu_pmu_0/libsrc/iicps_v3_10/src
+
+make -C psu_pmu_0/libsrc/iicps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -
+ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/iicps_v3_10/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/iicps_v3_10/src'
+
+Running Make include in psu_pmu_0/libsrc/xilskey_v6_8/src
+
+make -C psu_pmu_0/libsrc/xilskey_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+PILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g 
+-ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/xilskey_v6_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/xilskey_v6_8/src'
+
+Running Make include in psu_pmu_0/libsrc/dpdma_v1_1/src
+
+make -C psu_pmu_0/libsrc/dpdma_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+LER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -f
+function-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/dpdma_v1_1/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/dpdma_v1_1/src'
+
+Running Make include in psu_pmu_0/libsrc/standalone_v7_1/src
+
+make -C psu_pmu_0/libsrc/standalone_v7_1/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "
+COMPILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=
+-g -ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/standalone_v7_1/src'
+
+make[3]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/standalone_v7_1/src/profile'
+
+make[3]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/standalone_v7_1/src/profile'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/standalone_v7_1/src'
+
+Running Make include in psu_pmu_0/libsrc/uartps_v3_8/src
+
+make -C psu_pmu_0/libsrc/uartps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -
+ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/uartps_v3_8/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/uartps_v3_8/src'
+
+Running Make include in psu_pmu_0/libsrc/pciepsu_v1_0/src
+
+make -C psu_pmu_0/libsrc/pciepsu_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+PILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g 
+-ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/pciepsu_v1_0/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/pciepsu_v1_0/src'
+
+Running Make include in psu_pmu_0/libsrc/cpu_v2_10/src
+
+make -C psu_pmu_0/libsrc/cpu_v2_10/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/cpu_v2_10/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/cpu_v2_10/src'
+
+Running Make include in psu_pmu_0/libsrc/qspipsu_v1_10/src
+
+make -C psu_pmu_0/libsrc/qspipsu_v1_10/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+MPILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g
+ -ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/qspipsu_v1_10/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/qspipsu_v1_10/src'
+
+Running Make libs in psu_pmu_0/libsrc/clockps_v1_1/src
+
+make -C psu_pmu_0/libsrc/clockps_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/clockps_v1_1/src'
+
+Compiling clockps
+
+mb-ar: creating ../../../lib/libxil.a
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/clockps_v1_1/src'
+
+Running Make libs in psu_pmu_0/libsrc/xilsecure_v4_1/src
+
+make -C psu_pmu_0/libsrc/xilsecure_v4_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -
+ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/xilsecure_v4_1/src'
+
+Compiling XilSecure Library
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/xilsecure_v4_1/src'
+
+Running Make libs in psu_pmu_0/libsrc/rtcpsu_v1_8/src
+
+make -C psu_pmu_0/libsrc/rtcpsu_v1_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffu
+nction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/rtcpsu_v1_8/src'
+
+Compiling rtcpsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/rtcpsu_v1_8/src'
+
+Running Make libs in psu_pmu_0/libsrc/resetps_v1_2/src
+
+make -C psu_pmu_0/libsrc/resetps_v1_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/resetps_v1_2/src'
+
+Compiling resetps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/resetps_v1_2/src'
+
+Running Make libs in psu_pmu_0/libsrc/csudma_v1_5/src
+
+make -C psu_pmu_0/libsrc/csudma_v1_5/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffu
+nction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/csudma_v1_5/src'
+
+Compiling csudma
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/csudma_v1_5/src'
+
+Running Make libs in psu_pmu_0/libsrc/axipmon_v6_7/src
+
+make -C psu_pmu_0/libsrc/axipmon_v6_7/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/axipmon_v6_7/src'
+
+Compiling axipmon
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/axipmon_v6_7/src'
+
+Running Make libs in psu_pmu_0/libsrc/ipipsu_v2_5/src
+
+make -C psu_pmu_0/libsrc/ipipsu_v2_5/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffu
+nction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/ipipsu_v2_5/src'
+
+Compiling ipipsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/ipipsu_v2_5/src'
+
+Running Make libs in psu_pmu_0/libsrc/zdma_v1_8/src
+
+make -C psu_pmu_0/libsrc/zdma_v1_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunc
+tion-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/zdma_v1_8/src'
+
+Compiling zdma
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/zdma_v1_8/src'
+
+Running Make libs in psu_pmu_0/libsrc/gpiops_v3_6/src
+
+make -C psu_pmu_0/libsrc/gpiops_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffu
+nction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/gpiops_v3_6/src'
+
+Compiling gpiops
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/gpiops_v3_6/src'
+
+Running Make libs in psu_pmu_0/libsrc/usbpsu_v1_6/src
+
+make -C psu_pmu_0/libsrc/usbpsu_v1_6/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffu
+nction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/usbpsu_v1_6/src'
+
+Compiling usbpsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/usbpsu_v1_6/src'
+
+Running Make libs in psu_pmu_0/libsrc/emacps_v3_10/src
+
+make -C psu_pmu_0/libsrc/emacps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/emacps_v3_10/src'
+
+Compiling emacps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/emacps_v3_10/src'
+
+Running Make libs in psu_pmu_0/libsrc/ttcps_v3_10/src
+
+make -C psu_pmu_0/libsrc/ttcps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffu
+nction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/ttcps_v3_10/src'
+
+Compiling ttcps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/ttcps_v3_10/src'
+
+Running Make libs in psu_pmu_0/libsrc/canps_v3_3/src
+
+make -C psu_pmu_0/libsrc/canps_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffun
+ction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/canps_v3_3/src'
+
+Compiling canps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/canps_v3_3/src'
+
+Running Make libs in psu_pmu_0/libsrc/video_common_v4_8/src
+
+make -C psu_pmu_0/libsrc/video_common_v4_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+OMPILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-
+g -ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/video_common_v4_8/src'
+
+Compiling video_common
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/video_common_v4_8/src'
+
+Running Make libs in psu_pmu_0/libsrc/xilfpga_v5_1/src
+
+make -C psu_pmu_0/libsrc/xilfpga_v5_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/xilfpga_v5_1/src'
+
+Compiling xilfpga Library
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/xilfpga_v5_1/src'
+
+Running Make libs in psu_pmu_0/libsrc/sysmonpsu_v2_5/src
+
+make -C psu_pmu_0/libsrc/sysmonpsu_v2_5/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -
+ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/sysmonpsu_v2_5/src'
+
+Compiling sysmonpsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/sysmonpsu_v2_5/src'
+
+Running Make libs in psu_pmu_0/libsrc/wdtps_v3_2/src
+
+make -C psu_pmu_0/libsrc/wdtps_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffun
+ction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/wdtps_v3_2/src'
+
+Compiling wdtps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/wdtps_v3_2/src'
+
+Running Make libs in psu_pmu_0/libsrc/ddrcpsu_v1_1/src
+
+make -C psu_pmu_0/libsrc/ddrcpsu_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/ddrcpsu_v1_1/src'
+
+Compiling ddrcpsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/ddrcpsu_v1_1/src'
+
+Running Make libs in psu_pmu_0/libsrc/avbuf_v2_2/src
+
+make -C psu_pmu_0/libsrc/avbuf_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffun
+ction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/avbuf_v2_2/src'
+
+Compiling avbuf
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/avbuf_v2_2/src'
+
+Running Make libs in psu_pmu_0/libsrc/sdps_v3_8/src
+
+make -C psu_pmu_0/libsrc/sdps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunc
+tion-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/sdps_v3_8/src'
+
+Compiling sdps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/sdps_v3_8/src'
+
+Running Make libs in psu_pmu_0/libsrc/iicps_v3_10/src
+
+make -C psu_pmu_0/libsrc/iicps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffu
+nction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/iicps_v3_10/src'
+
+Compiling iicps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/iicps_v3_10/src'
+
+Running Make libs in psu_pmu_0/libsrc/xilskey_v6_8/src
+
+make -C psu_pmu_0/libsrc/xilskey_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/xilskey_v6_8/src'
+
+Compiling Xilskey Library
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/xilskey_v6_8/src'
+
+Running Make libs in psu_pmu_0/libsrc/dpdma_v1_1/src
+
+make -C psu_pmu_0/libsrc/dpdma_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffun
+ction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/dpdma_v1_1/src'
+
+Compiling dpdma
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/dpdma_v1_1/src'
+
+Running Make libs in psu_pmu_0/libsrc/standalone_v7_1/src
+
+make -C psu_pmu_0/libsrc/standalone_v7_1/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+PILER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g 
+-ffunction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/standalone_v7_1/src'
+
+Compiling standalone
+
+microblaze_sleep.c:75:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/standalone_v7_1/src'
+
+Running Make libs in psu_pmu_0/libsrc/uartps_v3_8/src
+
+make -C psu_pmu_0/libsrc/uartps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffu
+nction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/uartps_v3_8/src'
+
+Compiling uartps
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/uartps_v3_8/src'
+
+Running Make libs in psu_pmu_0/libsrc/pciepsu_v1_0/src
+
+make -C psu_pmu_0/libsrc/pciepsu_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ff
+unction-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/pciepsu_v1_0/src'
+
+Compiling pciepsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/pciepsu_v1_0/src'
+
+Running Make libs in psu_pmu_0/libsrc/cpu_v2_10/src
+
+make -C psu_pmu_0/libsrc/cpu_v2_10/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunc
+tion-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/cpu_v2_10/src'
+
+Compiling cpu
+
+make[3]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/cpu_v2_10/src'
+
+make[3]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/cpu_v2_10/src'
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/cpu_v2_10/src'
+
+Running Make libs in psu_pmu_0/libsrc/qspipsu_v1_10/src
+
+make -C psu_pmu_0/libsrc/qspipsu_v1_10/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+LER_FLAGS=  -O2 -c -mcpu=v9.2 -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -f
+function-sections -fdata-sections -Wall -Wextra -Os -flto -ffat-lto-objects"
+
+make[2]: Entering directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/lib
+src/qspipsu_v1_10/src'
+
+Compiling qspipsu
+
+make[2]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp/psu_pmu_0/libs
+rc/qspipsu_v1_10/src'
+
+Finished building libraries
+
+make[1]: Leaving directory '/home/whitney/zcu102_demo/vitis_workspace/zcu102_demo0/zynqmp_pmufw/zynqmp_pmufw_bsp'
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_crc.c -o xpfw_crc.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_master.c -o pm_master.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_mod_legacy.c -o xpfw_mod_legacy.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_mod_em.c -o xpfw_mod_em.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_error_manager.c -o xpfw_error_manager.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_restart.c -o xpfw_restart.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_node_reset.c -o pm_node_reset.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_mmio_access.c -o pm_mmio_access.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_system.c -o pm_system.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_config.c -o pm_config.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_core.c -o pm_core.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_xpu.c -o xpfw_xpu.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_scheduler.c -o xpfw_scheduler.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_core.c -o xpfw_core.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_gic_proxy.c -o pm_gic_proxy.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_notifier.c -o pm_notifier.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_aib.c -o xpfw_aib.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_events.c -o xpfw_events.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_slave.c -o pm_slave.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_pinctrl.c -o pm_pinctrl.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_mod_pm.c -o xpfw_mod_pm.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_ddr.c -o pm_ddr.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_interrupts.c -o xpfw_interrupts.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_qspi.c -o pm_qspi.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_mod_dap.c -o xpfw_mod_dap.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_resets.c -o xpfw_resets.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_util.c -o xpfw_util.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_mod_rtc.c -o xpfw_mod_rtc.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_rom_interface.c -o xpfw_rom_interface.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_mod_wdt.c -o xpfw_mod_wdt.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_proc.c -o pm_proc.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_callbacks.c -o pm_callbacks.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_mod_stl.c -o xpfw_mod_stl.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c idle_hooks.c -o idle_hooks.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_ipi_manager.c -o xpfw_ipi_manager.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_requirement.c -o pm_requirement.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_mod_ultra96.c -o xpfw_mod_ultra96.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_platform.c -o xpfw_platform.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_extern.c -o pm_extern.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_node.c -o pm_node.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_module.c -o xpfw_module.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_periph.c -o pm_periph.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_user_startup.c -o xpfw_user_startup.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_mod_common.c -o xpfw_mod_common.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_pll.c -o pm_pll.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_sram.c -o pm_sram.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_binding.c -o pm_binding.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_hooks.c -o pm_hooks.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_gpp.c -o pm_gpp.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_usb.c -o pm_usb.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_power.c -o pm_power.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_main.c -o xpfw_main.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_reset.c -o pm_reset.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_mod_sched.c -o xpfw_mod_sched.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_csudma.c -o pm_csudma.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c pm_clock.c -o pm_clock.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-object
+s    -c xpfw_start.S -o xpfw_start.o -Izynqmp_pmufw_bsp/psu_pmu_0/include -I.
+
+mb-gcc -o executable.elf  xpfw_crc.o  pm_master.o  xpfw_mod_legacy.o  xpfw_mod_em.o  xpfw_error_manager.o  xpfw_restart.o  pm_n
+ode_reset.o  pm_mmio_access.o  pm_system.o  pm_config.o  pm_core.o  xpfw_xpu.o  xpfw_scheduler.o  xpfw_core.o  pm_gic_proxy.o  
+pm_notifier.o  xpfw_aib.o  xpfw_events.o  pm_slave.o  pm_pinctrl.o  xpfw_mod_pm.o  pm_ddr.o  xpfw_interrupts.o  pm_qspi.o  xpfw
+_mod_dap.o  xpfw_resets.o  xpfw_util.o  xpfw_mod_rtc.o  xpfw_rom_interface.o  xpfw_mod_wdt.o  pm_proc.o  pm_callbacks.o  xpfw_m
+od_stl.o  idle_hooks.o  xpfw_ipi_manager.o  pm_requirement.o  xpfw_mod_ultra96.o  xpfw_platform.o  pm_extern.o  pm_node.o  xpfw
+_module.o  pm_periph.o  xpfw_user_startup.o  xpfw_mod_common.o  pm_pll.o  pm_sram.o  pm_binding.o  pm_hooks.o  pm_gpp.o  pm_usb
+.o  pm_power.o  xpfw_main.o  pm_reset.o  xpfw_mod_sched.o  pm_csudma.o  pm_clock.o  xpfw_start.o  -MMD -MP      -mlittle-endian
+ -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects    -Wl,--start-group,-lxil,-lgcc,-
+lc,--end-group -Wl,--start-group,-lxilfpga,-lxil,-lxilsecure,-lgcc,-lc,--end-group -Wl,--start-group,-lxilsecure,-lxil,-lgcc,-l
+c,--end-group -Wl,--start-group,-lxilskey,-lxil,-lgcc,-lc,--end-group                                                          
+                                                        -nostartfiles -Wl,--no-relax -Wl,--gc-sections -Lzynqmp_pmufw_bsp/psu_p
+mu_0/lib -Tlscript.ld
+
+Building the BSP Library for domain  - standalone_domain on processor psu_cortexa53_0
+Running Make include in psu_cortexa53_0/libsrc/clockps_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/clockps_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/scugic_v4_1/src
+
+make -C psu_cortexa53_0/libsrc/scugic_v4_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/resetps_v1_2/src
+
+make -C psu_cortexa53_0/libsrc/resetps_v1_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/csudma_v1_5/src
+
+make -C psu_cortexa53_0/libsrc/csudma_v1_5/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=
+aarch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_7/src
+
+make -C psu_cortexa53_0/libsrc/axipmon_v6_7/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_5/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/zdma_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/zdma_v1_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_6/src
+
+make -C psu_cortexa53_0/libsrc/gpiops_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/usbpsu_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/emacps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/emacps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/ttcps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/canps_v3_3/src
+
+make -C psu_cortexa53_0/libsrc/canps_v3_3/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/video_common_v4_8/src
+
+make -C psu_cortexa53_0/libsrc/video_common_v4_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aar
+ch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/wdtps_v3_2/src
+
+make -C psu_cortexa53_0/libsrc/wdtps_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/avbuf_v2_2/src
+
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/sdps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/sdps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/iicps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/iicps_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/dpdma_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/standalone_v7_1/src
+
+make -C psu_cortexa53_0/libsrc/standalone_v7_1/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch
+64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/uartps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/uartps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/pciepsu_v1_0/src
+
+make -C psu_cortexa53_0/libsrc/pciepsu_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aa
+rch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make include in psu_cortexa53_0/libsrc/qspipsu_v1_10/src
+
+make -C psu_cortexa53_0/libsrc/qspipsu_v1_10/src -s include  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64
+-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Running Make libs in psu_cortexa53_0/libsrc/clockps_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/clockps_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling clockps
+
+aarch64-none-elf-ar: creating ../../../lib/libxil.a
+Running Make libs in psu_cortexa53_0/libsrc/scugic_v4_1/src
+
+make -C psu_cortexa53_0/libsrc/scugic_v4_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling scugic
+
+Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/rtcpsu_v1_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling rtcpsu
+
+Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_2/src
+
+make -C psu_cortexa53_0/libsrc/resetps_v1_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling resetps
+
+Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_5/src
+
+make -C psu_cortexa53_0/libsrc/csudma_v1_5/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling csudma
+
+Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aar
+ch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling coresightps_dcc
+
+Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_7/src
+
+make -C psu_cortexa53_0/libsrc/axipmon_v6_7/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling axipmon
+
+Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/ipipsu_v2_5/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling ipipsu
+
+Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_8/src
+
+make -C psu_cortexa53_0/libsrc/zdma_v1_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling zdma
+
+Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_6/src
+
+make -C psu_cortexa53_0/libsrc/gpiops_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling gpiops
+
+Running Make libs in psu_cortexa53_0/libsrc/usbpsu_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/usbpsu_v1_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling usbpsu
+
+Running Make libs in psu_cortexa53_0/libsrc/emacps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/emacps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling emacps
+
+Running Make libs in psu_cortexa53_0/libsrc/ttcps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/ttcps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling ttcps
+
+Running Make libs in psu_cortexa53_0/libsrc/canps_v3_3/src
+
+make -C psu_cortexa53_0/libsrc/canps_v3_3/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling canps
+
+Running Make libs in psu_cortexa53_0/libsrc/video_common_v4_8/src
+
+make -C psu_cortexa53_0/libsrc/video_common_v4_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling video_common
+
+Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src
+
+make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_5/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling sysmonpsu
+
+Running Make libs in psu_cortexa53_0/libsrc/wdtps_v3_2/src
+
+make -C psu_cortexa53_0/libsrc/wdtps_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling wdtps
+
+Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling ddrcpsu
+
+Running Make libs in psu_cortexa53_0/libsrc/avbuf_v2_2/src
+
+make -C psu_cortexa53_0/libsrc/avbuf_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling avbuf
+
+Running Make libs in psu_cortexa53_0/libsrc/sdps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/sdps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling sdps
+
+Running Make libs in psu_cortexa53_0/libsrc/iicps_v3_10/src
+
+make -C psu_cortexa53_0/libsrc/iicps_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling iicps
+
+Running Make libs in psu_cortexa53_0/libsrc/dpdma_v1_1/src
+
+make -C psu_cortexa53_0/libsrc/dpdma_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling dpdma
+
+Running Make libs in psu_cortexa53_0/libsrc/standalone_v7_1/src
+
+make -C psu_cortexa53_0/libsrc/standalone_v7_1/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling standalone ARMv8 64 bit
+
+In file included from xtime_l.c:50:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:57:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:52:
+xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Running Make libs in psu_cortexa53_0/libsrc/uartps_v3_8/src
+
+make -C psu_cortexa53_0/libsrc/uartps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling uartps
+
+Running Make libs in psu_cortexa53_0/libsrc/pciepsu_v1_0/src
+
+make -C psu_cortexa53_0/libsrc/pciepsu_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling pciepsu
+
+Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src
+
+make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_6/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch
+64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling cpu_cortexa53
+
+Running Make libs in psu_cortexa53_0/libsrc/qspipsu_v1_10/src
+
+make -C psu_cortexa53_0/libsrc/qspipsu_v1_10/src -s libs  "SHELL=/bin/sh" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+Compiling qspipsu
+
+Finished building libraries
+

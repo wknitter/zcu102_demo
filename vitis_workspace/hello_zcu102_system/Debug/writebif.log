@@ -1,0 +1,56 @@
+TRACE::2020-06-13.22:11:40::SCWBifWriter::Found the complete platform /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm
+TRACE::2020-06-13.22:11:40::SCWBifWriter::hardware databse : zcu102_bd_wrapper_1
+TRACE::2020-06-13.22:11:40::SCWBifWriter::bitstream found in the design
+TRACE::2020-06-13.22:11:40::SCWBifWriter::Found a baremetal domain, proc: psu_cortexa53_0
+TRACE::2020-06-13.22:11:40::SCWBifWriter::proc type : 
+TRACE::2020-06-13.22:11:40::SCWBifWriter::proc[0] : psu_cortexa53_0
+TRACE::2020-06-13.22:11:40::SCWBifWriter::Device type is : zynqMP
+TRACE::2020-06-13.22:11:40::SCWBifWriter::Writing BIF to file : /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif
+TRACE::2020-06-13.22:11:40::SCWBifWriter::Writing the ZynqMP baremetal bif 
+TRACE::2020-06-13.22:11:40::SCWBifWriter::System Command Ran  /tools/Xilinx/Vitis/2019.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/boot/fsbl.elf
+TRACE::2020-06-13.22:11:40::SCWBifWriter:: Command result  
+TRACE::2020-06-13.22:11:40::SCWBifWriter::FSBL processor, command ran /tools/Xilinx/Vitis/2019.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/boot/fsbl.elf
+TRACE::2020-06-13.22:11:40::SCWBifWriter::FSBL target processor is a53-0
+TRACE::2020-06-13.22:11:40::SCWBifWriter::Boot processor is :a53-0
+TRACE::2020-06-13.22:17:20::SCWBifWriter::Found the complete platform /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm
+TRACE::2020-06-13.22:17:20::SCWBifWriter::hardware databse : zcu102_bd_wrapper_3
+TRACE::2020-06-13.22:17:20::SCWBifWriter::bitstream found in the design
+TRACE::2020-06-13.22:17:20::SCWBifWriter::Found a baremetal domain, proc: psu_cortexa53_0
+TRACE::2020-06-13.22:17:20::SCWBifWriter::proc type : 
+TRACE::2020-06-13.22:17:20::SCWBifWriter::proc[0] : psu_cortexa53_0
+TRACE::2020-06-13.22:17:20::SCWBifWriter::Device type is : zynqMP
+TRACE::2020-06-13.22:17:20::SCWBifWriter::Writing BIF to file : /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif
+TRACE::2020-06-13.22:17:20::SCWBifWriter::Writing the ZynqMP baremetal bif 
+TRACE::2020-06-13.22:17:20::SCWBifWriter::System Command Ran  /tools/Xilinx/Vitis/2019.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/boot/fsbl.elf
+TRACE::2020-06-13.22:17:20::SCWBifWriter:: Command result  
+TRACE::2020-06-13.22:17:20::SCWBifWriter::FSBL processor, command ran /tools/Xilinx/Vitis/2019.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/boot/fsbl.elf
+TRACE::2020-06-13.22:17:20::SCWBifWriter::FSBL target processor is a53-0
+TRACE::2020-06-13.22:17:20::SCWBifWriter::Boot processor is :a53-0
+TRACE::2020-06-14.14:02:44::SCWBifWriter::Found the complete platform /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm
+TRACE::2020-06-14.14:02:44::SCWBifWriter::hardware databse : zcu102_bd_wrapper_3
+TRACE::2020-06-14.14:02:44::SCWBifWriter::bitstream found in the design
+TRACE::2020-06-14.14:02:44::SCWBifWriter::Found a baremetal domain, proc: psu_cortexa53_0
+TRACE::2020-06-14.14:02:44::SCWBifWriter::proc type : 
+TRACE::2020-06-14.14:02:44::SCWBifWriter::proc[0] : psu_cortexa53_0
+TRACE::2020-06-14.14:02:44::SCWBifWriter::Device type is : zynqMP
+TRACE::2020-06-14.14:02:44::SCWBifWriter::Writing BIF to file : /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif
+TRACE::2020-06-14.14:02:44::SCWBifWriter::Writing the ZynqMP baremetal bif 
+TRACE::2020-06-14.14:02:44::SCWBifWriter::System Command Ran  /tools/Xilinx/Vitis/2019.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/boot/fsbl.elf
+TRACE::2020-06-14.14:02:45::SCWBifWriter:: Command result  
+TRACE::2020-06-14.14:02:45::SCWBifWriter::FSBL processor, command ran /tools/Xilinx/Vitis/2019.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/boot/fsbl.elf
+TRACE::2020-06-14.14:02:45::SCWBifWriter::FSBL target processor is a53-0
+TRACE::2020-06-14.14:02:45::SCWBifWriter::Boot processor is :a53-0
+TRACE::2020-06-14.15:16:07::SCWBifWriter::Found the complete platform /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/zcu102_demo.xpfm
+TRACE::2020-06-14.15:16:07::SCWBifWriter::hardware databse : zcu102_bd_wrapper_3
+TRACE::2020-06-14.15:16:07::SCWBifWriter::bitstream found in the design
+TRACE::2020-06-14.15:16:07::SCWBifWriter::Found a baremetal domain, proc: psu_cortexa53_0
+TRACE::2020-06-14.15:16:07::SCWBifWriter::proc type : 
+TRACE::2020-06-14.15:16:07::SCWBifWriter::proc[0] : psu_cortexa53_0
+TRACE::2020-06-14.15:16:07::SCWBifWriter::Device type is : zynqMP
+TRACE::2020-06-14.15:16:07::SCWBifWriter::Writing BIF to file : /home/whitney/zcu102_demo/vitis_workspace/hello_zcu102_system/Debug/system.bif
+TRACE::2020-06-14.15:16:07::SCWBifWriter::Writing the ZynqMP baremetal bif 
+TRACE::2020-06-14.15:16:07::SCWBifWriter::System Command Ran  /tools/Xilinx/Vitis/2019.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/boot/fsbl.elf
+TRACE::2020-06-14.15:16:07::SCWBifWriter:: Command result  
+TRACE::2020-06-14.15:16:07::SCWBifWriter::FSBL processor, command ran /tools/Xilinx/Vitis/2019.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/whitney/zcu102_demo/vitis_workspace/zcu102_demo/export/zcu102_demo/sw/zcu102_demo/boot/fsbl.elf
+TRACE::2020-06-14.15:16:07::SCWBifWriter::FSBL target processor is a53-0
+TRACE::2020-06-14.15:16:07::SCWBifWriter::Boot processor is :a53-0

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Jun 13 11:30:23 2020
+# Process ID: 21011
+# Current directory: /home/whitney/zcu102_demo/zcu102_demo.runs/zcu102_bd_auto_pc_0_synth_1
+# Command line: vivado -log zcu102_bd_auto_pc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zcu102_bd_auto_pc_0.tcl
+# Log file: /home/whitney/zcu102_demo/zcu102_demo.runs/zcu102_bd_auto_pc_0_synth_1/zcu102_bd_auto_pc_0.vds
+# Journal file: /home/whitney/zcu102_demo/zcu102_demo.runs/zcu102_bd_auto_pc_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source zcu102_bd_auto_pc_0.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP zcu102_bd_auto_pc_0, cache-ID = e4d2ce448ae94926.
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 13 11:30:51 2020...

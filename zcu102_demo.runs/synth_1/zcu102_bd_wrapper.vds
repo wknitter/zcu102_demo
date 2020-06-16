@@ -1,0 +1,357 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Jun 13 11:31:09 2020
+# Process ID: 21216
+# Current directory: /home/whitney/zcu102_demo/zcu102_demo.runs/synth_1
+# Command line: vivado -log zcu102_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source zcu102_bd_wrapper.tcl
+# Log file: /home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/zcu102_bd_wrapper.vds
+# Journal file: /home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source zcu102_bd_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.2/data/ip'.
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1575.105 ; gain = 48.656 ; free physical = 11189 ; free virtual = 13806
+Command: synth_design -top zcu102_bd_wrapper -part xczu9eg-ffvb1156-2-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu9eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu9eg'
+INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21303 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 2485.730 ; gain = 0.000 ; free physical = 9906 ; free virtual = 12746
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd_wrapper' [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/hdl/zcu102_bd_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd' [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:965]
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd_axi_gpio_0_0' [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd_axi_gpio_0_0' (1#1) [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd_ps8_0_axi_periph_0' [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:1276]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_TODBKE' [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_TODBKE' (2#1) [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:12]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1VDXW2A' [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:144]
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd_auto_ds_0' [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd_auto_ds_0' (3#1) [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd_auto_pc_0' [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd_auto_pc_0' (4#1) [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1VDXW2A' (5#1) [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:144]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_ABY9XM' [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:554]
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd_auto_ds_1' [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd_auto_ds_1' (6#1) [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd_auto_pc_1' [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd_auto_pc_1' (7#1) [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_ABY9XM' (8#1) [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:554]
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd_xbar_0' [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd_xbar_0' (9#1) [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_xbar_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'zcu102_bd_xbar_0' has 40 connections declared, but only 38 given [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:1879]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd_ps8_0_axi_periph_0' (10#1) [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:1276]
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd_rst_ps8_0_99M_0' [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_rst_ps8_0_99M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd_rst_ps8_0_99M_0' (11#1) [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_rst_ps8_0_99M_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_99M' of module 'zcu102_bd_rst_ps8_0_99M_0' has 10 connections declared, but only 6 given [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:1187]
+INFO: [Synth 8-6157] synthesizing module 'zcu102_bd_zynq_ultra_ps_e_0_0' [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd_zynq_ultra_ps_e_0_0' (12#1) [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/.Xil/Vivado-21216-knithappens/realtime/zcu102_bd_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'zcu102_bd_zynq_ultra_ps_e_0_0' has 83 connections declared, but only 79 given [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:1194]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd' (13#1) [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/synth/zcu102_bd.v:965]
+INFO: [Synth 8-6155] done synthesizing module 'zcu102_bd_wrapper' (14#1) [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/hdl/zcu102_bd_wrapper.v:12]
+WARNING: [Synth 8-3331] design s01_couplers_imp_ABY9XM has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s01_couplers_imp_ABY9XM has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design s00_couplers_imp_1VDXW2A has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1VDXW2A has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_TODBKE has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_TODBKE has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_TODBKE has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_TODBKE has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port S01_ACLK
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port S01_ARESETN
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2545.477 ; gain = 59.746 ; free physical = 9935 ; free virtual = 12777
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2548.445 ; gain = 62.715 ; free physical = 9914 ; free virtual = 12769
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2548.445 ; gain = 62.715 ; free physical = 9914 ; free virtual = 12769
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2548.445 ; gain = 0.000 ; free physical = 9830 ; free virtual = 12750
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_zynq_ultra_ps_e_0_0/zcu102_bd_zynq_ultra_ps_e_0_0/zcu102_bd_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'zcu102_bd_i/zynq_ultra_ps_e_0'
+create_clock: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2663.164 ; gain = 0.000 ; free physical = 9725 ; free virtual = 12661
+Finished Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_zynq_ultra_ps_e_0_0/zcu102_bd_zynq_ultra_ps_e_0_0/zcu102_bd_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'zcu102_bd_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_axi_gpio_0_0/zcu102_bd_axi_gpio_0_0/zcu102_bd_axi_gpio_0_0_in_context.xdc] for cell 'zcu102_bd_i/axi_gpio_0'
+Finished Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_axi_gpio_0_0/zcu102_bd_axi_gpio_0_0/zcu102_bd_axi_gpio_0_0_in_context.xdc] for cell 'zcu102_bd_i/axi_gpio_0'
+Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_xbar_0/zcu102_bd_xbar_0/zcu102_bd_xbar_0_in_context.xdc] for cell 'zcu102_bd_i/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_xbar_0/zcu102_bd_xbar_0/zcu102_bd_xbar_0_in_context.xdc] for cell 'zcu102_bd_i/ps8_0_axi_periph/xbar'
+Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_auto_ds_0/zcu102_bd_auto_ds_0/zcu102_bd_auto_ds_0_in_context.xdc] for cell 'zcu102_bd_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Finished Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_auto_ds_0/zcu102_bd_auto_ds_0/zcu102_bd_auto_ds_0_in_context.xdc] for cell 'zcu102_bd_i/ps8_0_axi_periph/s00_couplers/auto_ds'
+Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_auto_pc_0/zcu102_bd_auto_pc_0/zcu102_bd_auto_pc_1_in_context.xdc] for cell 'zcu102_bd_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_auto_pc_0/zcu102_bd_auto_pc_0/zcu102_bd_auto_pc_1_in_context.xdc] for cell 'zcu102_bd_i/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_auto_ds_1/zcu102_bd_auto_ds_1/zcu102_bd_auto_ds_0_in_context.xdc] for cell 'zcu102_bd_i/ps8_0_axi_periph/s01_couplers/auto_ds'
+Finished Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_auto_ds_1/zcu102_bd_auto_ds_1/zcu102_bd_auto_ds_0_in_context.xdc] for cell 'zcu102_bd_i/ps8_0_axi_periph/s01_couplers/auto_ds'
+Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_auto_pc_1/zcu102_bd_auto_pc_1/zcu102_bd_auto_pc_1_in_context.xdc] for cell 'zcu102_bd_i/ps8_0_axi_periph/s01_couplers/auto_pc'
+Finished Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_auto_pc_1/zcu102_bd_auto_pc_1/zcu102_bd_auto_pc_1_in_context.xdc] for cell 'zcu102_bd_i/ps8_0_axi_periph/s01_couplers/auto_pc'
+Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_rst_ps8_0_99M_0/zcu102_bd_rst_ps8_0_99M_0/zcu102_bd_rst_ps8_0_99M_0_in_context.xdc] for cell 'zcu102_bd_i/rst_ps8_0_99M'
+Finished Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.srcs/sources_1/bd/zcu102_bd/ip/zcu102_bd_rst_ps8_0_99M_0/zcu102_bd_rst_ps8_0_99M_0/zcu102_bd_rst_ps8_0_99M_0_in_context.xdc] for cell 'zcu102_bd_i/rst_ps8_0_99M'
+Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2663.164 ; gain = 0.000 ; free physical = 9725 ; free virtual = 12661
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2663.164 ; gain = 0.000 ; free physical = 9725 ; free virtual = 12661
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 2663.164 ; gain = 177.434 ; free physical = 9722 ; free virtual = 12690
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu9eg-ffvb1156-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 2663.164 ; gain = 177.434 ; free physical = 9722 ; free virtual = 12690
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for zcu102_bd_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zcu102_bd_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zcu102_bd_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zcu102_bd_i/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zcu102_bd_i/ps8_0_axi_periph/s00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zcu102_bd_i/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zcu102_bd_i/ps8_0_axi_periph/s01_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zcu102_bd_i/ps8_0_axi_periph/s01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zcu102_bd_i/ps8_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for zcu102_bd_i/rst_ps8_0_99M. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 2663.164 ; gain = 177.434 ; free physical = 9713 ; free virtual = 12689
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:38 . Memory (MB): peak = 2663.164 ; gain = 177.434 ; free physical = 9711 ; free virtual = 12683
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2520 (col length:168)
+BRAMs: 1824 (col length: RAMB18 168 RAMB36 84)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port S00_ARESETN
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port S01_ACLK
+WARNING: [Synth 8-3331] design zcu102_bd_ps8_0_axi_periph_0 has unconnected port S01_ARESETN
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 2663.164 ; gain = 177.434 ; free physical = 9656 ; free virtual = 12645
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:02:09 . Memory (MB): peak = 3155.820 ; gain = 670.090 ; free physical = 8908 ; free virtual = 12009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:02:09 . Memory (MB): peak = 3155.820 ; gain = 670.090 ; free physical = 8908 ; free virtual = 12009
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:22 ; elapsed = 00:02:09 . Memory (MB): peak = 3165.836 ; gain = 680.105 ; free physical = 8907 ; free virtual = 12008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:02:14 . Memory (MB): peak = 3179.711 ; gain = 693.980 ; free physical = 8906 ; free virtual = 12007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:02:14 . Memory (MB): peak = 3179.711 ; gain = 693.980 ; free physical = 8906 ; free virtual = 12007
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:27 ; elapsed = 00:02:14 . Memory (MB): peak = 3179.711 ; gain = 693.980 ; free physical = 8906 ; free virtual = 12007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:27 ; elapsed = 00:02:14 . Memory (MB): peak = 3179.711 ; gain = 693.980 ; free physical = 8906 ; free virtual = 12007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:27 ; elapsed = 00:02:14 . Memory (MB): peak = 3179.711 ; gain = 693.980 ; free physical = 8906 ; free virtual = 12007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:27 ; elapsed = 00:02:14 . Memory (MB): peak = 3179.711 ; gain = 693.980 ; free physical = 8906 ; free virtual = 12007
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |zcu102_bd_xbar_0              |         1|
+|2     |zcu102_bd_auto_ds_0           |         1|
+|3     |zcu102_bd_auto_pc_0           |         1|
+|4     |zcu102_bd_auto_ds_1           |         1|
+|5     |zcu102_bd_auto_pc_1           |         1|
+|6     |zcu102_bd_axi_gpio_0_0        |         1|
+|7     |zcu102_bd_rst_ps8_0_99M_0     |         1|
+|8     |zcu102_bd_zynq_ultra_ps_e_0_0 |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |zcu102_bd_auto_ds_0           |     1|
+|2     |zcu102_bd_auto_ds_1           |     1|
+|3     |zcu102_bd_auto_pc_0           |     1|
+|4     |zcu102_bd_auto_pc_1           |     1|
+|5     |zcu102_bd_axi_gpio_0_0        |     1|
+|6     |zcu102_bd_rst_ps8_0_99M_0     |     1|
+|7     |zcu102_bd_xbar_0              |     1|
+|8     |zcu102_bd_zynq_ultra_ps_e_0_0 |     1|
+|9     |OBUF                          |     8|
++------+------------------------------+------+
+
+Report Instance Areas: 
++------+---------------------+-----------------------------+------+
+|      |Instance             |Module                       |Cells |
++------+---------------------+-----------------------------+------+
+|1     |top                  |                             |  1999|
+|2     |  zcu102_bd_i        |zcu102_bd                    |  1991|
+|3     |    ps8_0_axi_periph |zcu102_bd_ps8_0_axi_periph_0 |  1247|
+|4     |      s00_couplers   |s00_couplers_imp_1VDXW2A     |   519|
+|5     |      s01_couplers   |s01_couplers_imp_ABY9XM      |   519|
++------+---------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:27 ; elapsed = 00:02:14 . Memory (MB): peak = 3179.711 ; gain = 693.980 ; free physical = 8906 ; free virtual = 12007
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:13 ; elapsed = 00:01:56 . Memory (MB): peak = 3179.711 ; gain = 579.262 ; free physical = 8947 ; free virtual = 12048
+Synthesis Optimization Complete : Time (s): cpu = 00:01:27 ; elapsed = 00:02:15 . Memory (MB): peak = 3179.719 ; gain = 693.980 ; free physical = 8947 ; free virtual = 12048
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3186.648 ; gain = 0.000 ; free physical = 9013 ; free virtual = 12115
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3215.398 ; gain = 0.000 ; free physical = 8944 ; free virtual = 12046
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:53 ; elapsed = 00:02:51 . Memory (MB): peak = 3215.398 ; gain = 1640.293 ; free physical = 9069 ; free virtual = 12170
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3215.398 ; gain = 0.000 ; free physical = 9069 ; free virtual = 12170
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/whitney/zcu102_demo/zcu102_demo.runs/synth_1/zcu102_bd_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file zcu102_bd_wrapper_utilization_synth.rpt -pb zcu102_bd_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 13 11:34:25 2020...

@@ -1,0 +1,11 @@
+timestamp=[2020-06-13 11:49:51], mode=WORKBENCH_START, duration=0:00:06.020, duration_ms=6020, data={}
+timestamp=[2020-06-13 11:49:57], mode=WORKBENCH_UI_INIT, duration=0:00:06.047, duration_ms=6047, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2020-06-13 11:56:33], mode=PLATFORM_CREATION, duration=0:00:21.420, duration_ms=21420, data={platform_source=dsa, os=standalone, processor=psu_cortexa53, platform=null}
+timestamp=[2020-06-13 12:01:17], mode=PLATFORM_GENERATION, duration=0:02:02.591, duration_ms=122591, data={name=zcu102_demo}
+timestamp=[2020-06-13 22:08:29], mode=WORKBENCH_START, duration=0:00:12.128, duration_ms=12128, data={}
+timestamp=[2020-06-13 22:08:31], mode=WORKBENCH_UI_INIT, duration=0:00:02.339, duration_ms=2339, data={editors_count=1, platform_editors_count=1, projects_count=2, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,zcu102_demo}
+timestamp=[2020-06-13 22:10:31], mode=APP_CREATION, duration=0:00:03.665, duration_ms=3665, data={name=hello_zcu102, project_type=sdk, os=standalone, processor=cortex-a53, runtime=C/C++, platform=zcu102_demo, application_type=application}
+timestamp=[2020-06-13 22:11:25], mode=PLATFORM_GENERATION, duration=0:00:06.775, duration_ms=6775, data={name=zcu102_demo}
+timestamp=[2020-06-13 22:17:05], mode=PLATFORM_GENERATION, duration=0:00:40.369, duration_ms=40369, data={name=zcu102_demo}
+timestamp=[2020-06-14 15:11:20], mode=PLATFORM_CREATION, duration=0:00:08.190, duration_ms=8190, data={platform_source=dsa, os=standalone, processor=psu_cortexa53, platform=null}
+timestamp=[2020-06-14 15:17:02], mode=PLATFORM_GENERATION, duration=0:00:50.282, duration_ms=50282, data={name=zcu102_demo0}
