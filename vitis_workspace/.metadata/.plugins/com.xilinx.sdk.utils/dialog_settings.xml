@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="/home/whitney/zcu102_demo" key="scw_hwspec"/>
+	<item value="/tools/Xilinx/Vitis/2019.2/data/embeddedsw/lib/fixed_hwplatforms" key="scw_hwspec"/>
 	<item value="/home/whitney/zcu102_demo/linux_os0/images/linux" key="platform_editor"/>
 	<item value="/home/whitney/zcu102_demo/linux_os0/images/linux" key="linux_image_directory"/>
 	<item value="/home/whitney/zcu102_demo/linux_os0/images/linux" key="boot_components_directory"/>

@@ -30849,3 +30849,9 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
 
 !ENTRY com.xilinx.sdk.utils 0 0 2020-06-14 15:19:56.364
 !MESSAGE XSCT command with result: [::scw::sdx_reload_mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-06-18 15:10:54.037
+!MESSAGE Executing command: /tools/Xilinx/Vitis/2019.2/bin/wbtcv -mode batch -source vitis_webtalk.tcl
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-06-18 15:10:54.060
+!MESSAGE Executed Webtalk command
